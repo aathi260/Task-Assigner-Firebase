@@ -1,0 +1,118 @@
+.tasks {
+  width: 70%;
+  max-width: 21rem;
+  margin: 2rem;
+  padding: 1.5rem;
+}
+
+.taskHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskHeader h2 {
+  margin: 0;
+}
+
+.taskHeader .taskClose {
+  background: none;
+  border: none;
+  position: absolute;
+  font-size: 20px;
+  right: -10px;
+  bottom: 17px;
+  cursor: pointer;
+}
+
+.control {
+  margin: 1rem 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.billable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.control label,
+.control input {
+  display: block;
+}
+
+.control label,
+.billable label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+  font-size: 13.5px;
+}
+
+.control input {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: #f69235;
+  background: #fff2e7;
+}
+
+.actions {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+.pannel {
+  position: relative;
+  right: 10px;
+  width: 100%;
+  padding: 0 10px;
+  height: 19rem;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  .control {
+    align-items: left;
+    flex-direction: column;
+  }
+}
+
+.pannel::-webkit-scrollbar {
+  display: none;
+  /* display: block;
+  width: 7px; */
+}
+.pannel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pannel::-webkit-scrollbar-thumb {
+  background-color: rgb(221, 221, 221);
+  border-right: none;
+  border-left: none;
+  border-radius: 15px;
+}
+
+.pannel::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.pannel::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}

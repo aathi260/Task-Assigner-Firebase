@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AddTask from "./components/AddTask";
+import Button from "./UI/Button";
 
 function App() {
+  const [taskShown, setTaskShown] = useState(false);
+
+  const showTaskHandler = () => {
+    setTaskShown(true);
+  };
+  const hideTaskHandler = () => {
+    setTaskShown(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {taskShown && <AddTask onClose={hideTaskHandler} />}
+      <Button onClick={showTaskHandler}>Task Manager</Button>
     </div>
   );
 }
